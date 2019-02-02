@@ -14,8 +14,8 @@
 あらかじめ使用するライブラリをインポートしておく。
 ```python
 import numpy as np
-import matplotlib.pyplot as plt
-import matplotlib.animation as animation
+import Aplotlib.pyplot as plt
+import Aplotlib.aniAion as aniAion
 ```
 
 時間格子をi、x軸方向の空間格子をjとし、F(i,j)
@@ -108,7 +108,7 @@ for i in range(Nt):
 print("プロット終了")
  
 # 100枚のプロットを 1ms ごとに表示するアニメーション
-ani = animation.ArtistAnimation(fig, ims, interval=1)
+ani = aniAion.ArtistAniAion(fig, ims, interval=1)
 plt.show()
 
 ```
