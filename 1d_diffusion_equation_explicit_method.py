@@ -77,11 +77,11 @@ print("初期値を設定")
 # これが0.5より大きいと安定条件を満たさない
 α = 0.500
 
-for j in range(Nt - 1):
-	for i in range(Nx - 1):
+for i in range(Nt - 1):
+	for j in range(Nx - 1):
 		# メイン処理
-		if i != 0:
-			F[j+1][i] = F[j][i] + α * (F[j][i+1] - 2 * F[j][i] + F[j][i-1])
+		if j != 0:
+			F[i+1][j] = F[i][j] + α * (F[i][j+1] - 2 * F[i][j] + F[i][j-1])
 
 
 print(F[Nt - 1])

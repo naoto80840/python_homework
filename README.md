@@ -7,7 +7,7 @@
 
 ## 課題1の回答
 
-一次元熱拡散方程式の陽解法
+### 一次元熱拡散方程式の陽解法
 
 （[1d_diffusion_equation_explicit_method.py](https://github.com/naoto80840/python_homework/blob/master/1d_diffusion_equation_explicit_method.py)の説明）
 
@@ -28,13 +28,13 @@ F[j+1][i] = F[j][i] + α * (F[j][i+1] - 2 * F[j][i] + F[j][i-1])
 と表せる。
 ただし、
 
-棒の長さ L = Δx * Nx = 100
-格子点の数 Nx = 100 個
-格子間の距離 Δx = L / Nx = 0.01
-時間分割数 Nt = 201 step
-計算時間 t_max = 1
-1フレームの時間 Δt = 0.005 ※後述の α から逆算
-熱拡散率 λ = 0.01
+	棒の長さ L = Δx * Nx = 100
+	格子点の数 Nx = 100 個
+	格子間の距離 Δx = L / Nx = 0.01
+	時間分割数 Nt = 201 step
+	計算時間 t_max = 1
+	1フレームの時間 Δt = 0.005 ※後述の α から逆算
+	熱拡散率 λ = 0.01
 
 である。
 
@@ -112,3 +112,7 @@ ani = animation.ArtistAnimation(fig, ims, interval=1)
 plt.show()
 
 ```
+
+### 一次元熱拡散方程式の陰解法
+
+n+1回目のループの格子の状態を求めるにあたって、
